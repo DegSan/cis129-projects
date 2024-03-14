@@ -1,0 +1,56 @@
+#the follwing is complete top-down process for pseudocode
+
+  #analyze exam results and decide wether instructor should receive bonus
+ 
+  #initialize variables
+  #input the ten exam grades and count passes and failures
+  #summarize the exam results and decide whether instructor should receive a bonus
+
+#begin second refinement/ The complete pseudocode algorithm 
+
+  #initialize passes to zero
+  #initialize failures to zero
+
+  #for each of the ten students
+       #input the next exam result
+
+       #if the student passesd
+           #add one to passes
+
+       #else
+           #add one to failures
+
+  #display the number of passes
+  #display the number of failures
+
+  #if more than eight students passed
+       #display "Bonus to intructor"
+
+
+#Implement algorithm to Python code
+
+"""Using nested control statements to analyze examination results"""
+
+#initialize variables
+
+passes = 0
+failures = 0
+
+#process 10 students
+
+for student in range(10):
+    #get one exam result
+    result = int(input('Enter result (1=pass, 2=fail): '))
+
+    if result ==1:
+        passes = passes + 1
+
+    else:
+        failures = failures + 1
+
+#termination phase
+print('Passes:', passes)
+print('Failed:', failures)
+
+if passes > 8:
+    print('Bonus to instructor')
