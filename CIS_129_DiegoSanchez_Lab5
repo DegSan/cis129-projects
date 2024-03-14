@@ -1,0 +1,35 @@
+#Diego Sanchez
+#03/12/2024
+
+#This program will keep track of number os bottles collected for seven days
+# calculate the amount paid out (.10 cents each)
+
+#declare variables
+totalBottles = 0
+counter = 1
+todayBottles = 0
+totalPayout = 0
+keepGoing = 'y'
+
+#a while loop is needed to ask user for all seven days
+
+while keepGoing == 'y':
+    #code to set value of variables
+    todayBottles = int(input('Enter the number of bottles returned today: '))
+    totalBottles = totalBottles + todayBottles
+
+    #code to set value of totalPayout
+    totalPayout = totalPayout + todayBottles * 0.10
+
+    #code to print the number of total bottles and total payout
+
+    print(f'Total bottles: {totalBottles}')
+    print(f'Total payout: {totalPayout:.2f}')
+
+    #asking if user wants to enter more data
+    keepGoing = input('Do you want to eneter another week worth of data? (Enter y or n: ')
+
+
+
+#end the while statement
+print('The program has ended')
